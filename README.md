@@ -82,7 +82,7 @@ banco de dados
 - Usar o logging para gerar os log
 - Error Handling
 - Verificação da entrada (evitar ataques como SQLInjection com o lead_id, por exemplo)
-- (Swagger)[https://fastapi.tiangolo.com/features/] e documentação da API
+- [Swagger](https://fastapi.tiangolo.com/features/) e documentação da API
 
 ### Deploy (supondo um deploy na AWS)
 - Adaptar o entrypoint para um lambda_handler
