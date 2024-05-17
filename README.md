@@ -79,7 +79,8 @@ mais complexas como até regressão linear
 - Carregar o modelo e o scaler no início da API (@app.onstartup)
 - Usar injeção de dependência para que o fluxo fique menos complexo na hora de colocar no
 banco de dados
-- Usar o logging para gerar os log
+- Usar o logging para gerar os logs
+- Testes unitários
 - Error Handling
 - Verificação da entrada (evitar ataques como SQLInjection com o lead_id, por exemplo)
 - [Swagger](https://fastapi.tiangolo.com/features/) e documentação da API
