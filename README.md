@@ -1,8 +1,6 @@
 # API de classificação usando Scikit-Learn, FastAPI e Docker
 
-A API serve para classificar um dataset que vende cursos online para profissionais da insdústria, sendo que o mesmo está disponível [aqui](https://www.kaggle.com/datasets/amritachatterjee09/lead-scoring-dataset).
-A ETL está disponível em notebooks/data_cleaning e a modelagem em notebooks/data_modelling. 
-
+A API serve para classificar um dataset que vende cursos online para profissionais da insdústria, sendo que o mesmo está disponível [aqui](https://www.kaggle.com/datasets/amritachatterjee09/lead-scoring-dataset).O processamento dos dados está disponível em notebooks/data_cleaning e a modelagem em notebooks/data_modelling. 
 
 ## Como usar
 
@@ -74,6 +72,8 @@ mais complexas como até regressão linear
 - Testar outros modelos com o PyCaret (talvez um CatBoost performe melhor, por exemplo)
 - Utilizar as métricas alinhadas com a necessidade da empresa (usar o Mathew Correlation Coeficient dependendo da necessidade do Negócio)
 - Otimizar os hiperparâmetros
+- Usar o K-Fold/Cross validation ao invés do train_test_split
+- Usar outras técnicas de feature importance, como a regressão logística
 
 ### API 
 - Carregar o modelo e o scaler no início da API (@app.onstartup)
@@ -95,8 +95,9 @@ banco de dados
 ### Monitoramento 
 - Usar uma ferramenta que captura os logs para acompanhar em real-time (como [Datadog](https://docs.datadoghq.com/integrations/guide/aws-terraform-setup/))
 - Acompanhamento das métricas do modelo com uma ferramenta como o PowerBI para 
-evitar o Concept Drift
+evitar Data Drift e Concept Drift
     - Caso aconteça, retreinar o modelo
+- Acompanhamento dos resultados com o que estão entrado para ver o modelo está aderente com as decisões dos usuários
 
 
 
